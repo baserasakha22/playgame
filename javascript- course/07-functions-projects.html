@@ -1,0 +1,71 @@
+  <!DOCTYPE html>
+  <html>
+  <head>
+    <title>
+      Functions projects
+    </title>
+  </head>
+   <body>
+
+    
+    <script>
+
+      function greet (name){
+        console.log(`hello ${name}`);
+        if(!name){
+          console.log('hi there');
+        }
+      }
+
+
+      greet('Basira Sakha');
+      greet();
+
+       /*
+
+      function convertToFahrenheit (celsius){
+        console.log(fahrenheit = (celsius* 9/5) + 32)
+      }
+
+      convertToFahrenheit(25);
+
+      
+
+
+      function convertToFahrenheit(fahrenheit){
+        console.log(celsius = (fahrenheit - 32) * 5/9);
+      }
+
+      convertToFahrenheit(86);
+
+      */
+
+
+     function convertTemperature(degrees, unit) {
+        if (unit === 'C') {
+          const result = convertToFahrenheit(degrees);
+          return `${result}F`;
+        } else if (unit === 'F') {
+          const result = convertToCelsius(degrees);
+          return `${result}C`;
+        }
+      }
+
+      console.log(convertTemperature(25, 'C'));
+      console.log(convertTemperature(86, 'F'));
+      
+   
+
+      
+
+
+
+
+
+      
+     
+
+    </script>
+     
+    </body>
+</html> 

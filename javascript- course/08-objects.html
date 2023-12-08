@@ -1,0 +1,151 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>
+    Objects
+  </title>
+</head>
+  <body>
+
+  
+
+      <script>  
+      /*
+      // an object groups multiple values together.
+
+      const product ={
+        name : 'socks',
+        price : 1090,
+      };
+
+      console.log(product);
+
+      console.log(product.name);
+      console.log(product.price);
+
+      // change a value inside an object.
+
+      product.name = 'hats';
+      console.log(product)
+
+      //add a value to object.
+
+      product.newProperty = true;
+      console.log(product);
+
+      // remove a value from an object.
+
+      delete product.newProperty;
+      console.log(product)
+
+      */
+
+      const product2 ={
+        name : 'shirt',
+        'delivery-time': '1 day',
+        rating :{     //Nested Object.
+          stars : 4.5,
+          count : 87,
+        },
+        fun:  // when we save a function inside an object = Method
+          function function1(){
+            console.log('Function inside object')
+          }
+
+        
+      };
+      console.log(product2)
+      console.log(product2.name);  //dot notition
+      console.log(product2['delivery-time']); //Bracket Notition
+      
+      console.log(product2.rating);
+      console.log(product2.rating.count);
+
+      
+      product2.fun();
+
+      //Object + Function = Method
+
+      console.log(typeof console);
+      console.log(typeof console.log)  //log is a function that is save inside console object.
+
+
+
+      // JSON Built-in Object.
+
+        console.log(JSON.stringify(product2));   //javaScript => JSON. JSON  Does not support Functions.
+
+
+
+        const jsonString = JSON.stringify(product2);
+
+          console.log(JSON.parse(jsonString));  // JSON => javaScript.
+
+
+
+          //Auto-Boxing.
+          console.log('hello'.length);
+          console.log('hello'.toUpperCase());
+
+
+
+
+          const object1 ={
+          message : 'hello'
+          };
+
+
+          const object2 = object1;
+
+
+          object1.message = 'Good Job';
+
+          console.log(object1);
+          console.log(object2);
+
+
+
+          const object3 = {
+          message : 'Good Job'
+          };
+
+          
+
+          console.log(object3 === object1);
+          console.log(object2 === object1);
+
+
+
+          const object4 = {
+          message : 'Good Job',
+          price: 799,
+          };
+
+          // const message = object4.message ;
+          const {message,price} = object4;  //destructuring Method
+          console.log(message);
+          console.log(price);
+
+
+          const object5 = {
+           // message : message, 
+            message, //shorthand property
+
+            
+            //method: function function1(){
+            //  console.log('Method');
+           // }
+
+            method() {      //shorthand Method
+             console.log('method');
+            }
+          
+          };
+           console.log(object5);
+           object5.method();
+          
+
+      </script>
+    
+  </body>
+</html> 
